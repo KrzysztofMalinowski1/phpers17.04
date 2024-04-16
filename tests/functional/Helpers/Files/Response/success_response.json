@@ -1,0 +1,35 @@
+{
+  "result": "success",
+  "requestId": "2f9b9b965d2df93b4408",
+  "transactionId": "ta_q76mzGBEN8NlMB0K",
+  "title": "TR-MD1235-YA5MX",
+  "posId": "ps_Erdmv4lkqdVw7XRB",
+  "status": "pending",
+  "date": {
+    "creation": "2024-04-14 21:32:29",
+    "realization": null
+  },
+  "amount": 9.09,
+  "currency": "PLN",
+  "description": "test transaction via CARD",
+  "hiddenDescription": "my_hidden_description",
+  "payer": {
+    "payerId": "py_6N1r23ldjKVe98OX",
+    "email": "krzysztof.malinowski@tpay.com",
+    "name": "payment 4 - test",
+    "phone": "333234543",
+    "address": "asdfasdf 45",
+    "city": "New York",
+    "country": "PL",
+    "postalCode": "11-123"
+  },
+  "payments": {
+    "status": "pending",
+    "method": "pay_by_link",
+    "amountPaid": 0,
+    "date": {
+      "realization": null
+    }
+  },
+  "transactionPaymentUrl": "https://secure.sandbox.tpay.com/?title=TR-MD1235-YA5M"
+}

@@ -1,0 +1,24 @@
+{
+  "mappings": [
+    {
+      "name": "success response",
+      "request": {
+        "url": "/transactions",
+        "method": "POST"
+      },
+      "response": {
+        "status": 200,
+        "bodyFileName": "success-response.json",
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "persistent": true,
+      "priority": 1,
+      "postServeActions": []
+    }
+  ],
+  "meta": {
+    "total": 1
+  }
+}

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+MAIN_PROCESS_NAME=$(ps -ao comm= | head -n 1)
+
+if [ "$MAIN_PROCESS_NAME" != 'php-fpm' ]; then
+  exit 0
+fi
+
+if cgi-fcgi -bind -connect 127.0.0.1:9000; then
+  exit 0
+fi
+
+exit 1

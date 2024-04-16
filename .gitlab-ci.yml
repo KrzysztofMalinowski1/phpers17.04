@@ -1,0 +1,30 @@
+#Simple example of CI/CD
+
+#Setup db/redis etc
+.services-redis: &service-redis
+  alias: redis
+  name: redis:alpine
+
+.services-mysql: &service-mysql
+  alias: mysql
+  name: mysql:8.0
+
+.services: &services
+  services:
+    - <<: *service-mysql
+    - <<: *service-redis
+
+#wiremock can be added also
+
+#Unit tests and static analytic
+
+Functional tests:
+  image: PHP
+  <<: *services
+  script:
+    - php bin/console --env=test doctrine:database:create --if-not-exists
+    - php bin/console --env=test doctrine:schema:create
+    - php bin/console --env=test doctrine:fixtures:load
+    - php -d xdebug.default_enable=off -dmemory_limit=1G bin/phpunit --testsuite "Functional tests" --no-coverage
+  except:
+    - tags

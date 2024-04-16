@@ -1,0 +1,13 @@
+{
+  "result": "failed",
+  "requestId": "9d46a316b19a55b4be7c",
+  "errors": [
+    {
+      "errorCode": "general",
+      "errorMessage": "An error occurred while the transaction create. Please try again later",
+      "fieldName": "",
+      "devMessage": "",
+      "docUrl": ""
+    }
+  ]
+}
