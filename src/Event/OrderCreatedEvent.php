@@ -7,6 +7,7 @@ namespace App\Event;
 use App\Enum\Status;
 use Symfony\Contracts\EventDispatcher\Event;
 
+/** @see OrderCreatedListener */
 final class OrderCreatedEvent extends Event
 {
     public function __construct(

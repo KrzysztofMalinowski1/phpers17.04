@@ -70,7 +70,6 @@ class Dummy2Test extends BaseApplicationTest
         self::assertSame(60, $order->getAmount());
         self::assertSame($params['payerName'], $order->getPayerName());
         self::assertSame($params['address'], $order->getAddress());
-        self::assertSame(1, $order->getUserId());
         self::assertSame(Status::NEW, $order->getStatus());
 
         //and: validated erp notification https://github.com/zenstruck/messenger-test

@@ -6,6 +6,7 @@ namespace App\Message;
 
 use App\Enum\Status;
 
+/** @see ErpNotificationHandler */
 readonly class ErpNotification
 {
     public function __construct(

@@ -27,7 +27,7 @@ down: ## Turns containers off
 	docker-compose -p functionaltests down
 
 fixtures:
-	docker-compose -p functionaltests exec php bin/console doctrine:fixtures:load
+	docker-compose -p functionaltests exec php bin/console --env=test doctrine:fixtures:load
 
 make-migration:
 	docker-compose -p functionaltests exec php bin/console make:migration

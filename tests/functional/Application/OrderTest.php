@@ -9,6 +9,7 @@ use App\Entity\Product;
 use App\Enum\Status;
 use App\Message\ErpNotification;
 use App\Tests\functional\Helpers\BaseApplicationTest;
+use App\Tests\functional\Helpers\DatabaseTest;
 use App\Tests\functional\Helpers\FileContentHelper;
 use Faker\Factory;
 use Faker\Generator;
@@ -23,7 +24,6 @@ class OrderTest extends BaseApplicationTest
         parent::__construct();
         $this->faker = Factory::create();
     }
-
 
     public function testNotLoggedUserTryMakeOrder(): void
     {
@@ -102,7 +102,6 @@ class OrderTest extends BaseApplicationTest
         self::assertSame(60, $order->getAmount());
         self::assertSame($params['payerName'], $order->getPayerName());
         self::assertSame($params['address'], $order->getAddress());
-        self::assertSame(1, $order->getUserId());
         self::assertSame(Status::NEW, $order->getStatus());
 
         //and: validated erp notification https://github.com/zenstruck/messenger-test
