@@ -48,6 +48,7 @@ abstract class BaseApplicationTest extends WebTestCase
 
     protected function resetClient(): void
     {
+        /** https://github.com/symfony/symfony/issues/43266 */
         self::ensureKernelShutdown();
         $this->bootApplication();
     }
